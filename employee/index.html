@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>work</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="sheet.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+    <div class="persons">
+        <div class="container">
+            <div class="subcontainer1 animated fadeInLeft">
+                <div class="searchField animated fadeIn">
+                    <input type=text data-search placeholder="  ПОИСК ..." id="searchForm">
+                    <button id="clock" onclick='showEmployees(eployeeData)'>&#8634</button>
+                    <button id="a" onclick='sortUnorderedList("list-id"); '>А</button>
+                    <button id="z" onclick='sortUnorderedList("list-id", true)'>Я</button>
+                </div>
+                <div class="personList animated fadeIn">
+                    <h2 class="animated fadeIn">СПИСОК СОТРУДНИКОВ</h2>
+                    <ul class="list animated fadeIn" id="list" data-searchable></ul>
+                </div>
+            </div>
+            <div class="subcontainer2 animated fadeInRight">
+                <div class="rightMenu animated fadeIn">
+                    <div class="imageAdd">
+                        <img src="img/add.jpg">
+                    </div>
+                    <form id="myform">
+                        <input type="text" id="firstname" placeholder=" фамилия" data-search>
+                        <br>
+                        <br>
+                        <input type="text" id="lastname" placeholder=" имя">
+                        <br>
+                        <br>
+                        <input id="age" placeholder=" год" type="text">
+                        <br>
+                        <br>
+                    </form>
+                    <button onclick='addNewEmployee(),resetform()' id="addPerson">ДОБАВИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
